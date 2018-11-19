@@ -9,7 +9,7 @@ IWL_CROSS_COMPILE = $(IWL_ANDROID_ROOT)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8
 mod_cleanup := $(IWL_ANDROID_ROOT)/$(IWL_ANDROID_SRC_BASE)/dummy
 
 $(mod_cleanup) :
-		$(MAKE) -C $(IWL_ANDROID_SRC_BASE) ARCH=arm CROSS_COMPILE=$(IWL_CROSS_COMPILE) KLIB_BUILE=$(IWL_LINUXPATH)  COMPAT_CURDIR=$(IWL_ANDROID_ROOT)/$(IWL_ANDROID_SRC_BASE) clean
+		$(MAKE) -C $(IWL_ANDROID_SRC_BASE) ARCH=arm CROSS_COMPILE=$(IWL_CROSS_COMPILE) KLIB_BUILD=$(IWL_LINUXPATH)  COMPAT_CURDIR=$(IWL_ANDROID_ROOT)/$(IWL_ANDROID_SRC_BASE) clean
 		mkdir -p $(TARGET_OUT)/lib/modules
 
 iwlwifi_module_file := drivers/net/wireless/iwlwifi/iwlwifi.ko
